@@ -83,7 +83,7 @@ class ValidationMiddleware
 
             if(!$isCompanyExists->count()) //Company is exist check
                 return response(json_encode([
-                    'message' => 'Company / Package Not Found!'
+                    'message' => 'Company or Package Not Found!'
                 ]), 503); 
 
         }
