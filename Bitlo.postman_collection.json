@@ -1,0 +1,147 @@
+{
+	"info": {
+		"_postman_id": "131c6acc-9a8d-43d4-baba-6ca228696434",
+		"name": "Bitlo",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "CompanyRegister",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-CSRFToken",
+						"value": "Mb4MY0Tt0dZTaoz2hc3daZsL3aBWGRV7aW71E5Iw",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "site_url",
+							"value": "bitlo.com",
+							"type": "text"
+						},
+						{
+							"key": "name",
+							"value": "Göktuğ",
+							"type": "text"
+						},
+						{
+							"key": "lastname",
+							"value": "Özleyen",
+							"type": "text"
+						},
+						{
+							"key": "company_name",
+							"value": "Bitlo",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "ozleyengoktug@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "123456",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/company/register",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"company",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PackageToCompany",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "company_id",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "package_id",
+							"value": "1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/company/add-package",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"company",
+						"add-package"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetPackages",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "token",
+							"value": "MNlZutqCx0oZUPQYJZPS",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/company/packages",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"company",
+						"packages"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
